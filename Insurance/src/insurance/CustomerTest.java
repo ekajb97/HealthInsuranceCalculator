@@ -37,7 +37,7 @@ public class CustomerTest {
         
         System.out.println(p1.toString());
       
-        float finalAmount = p1.calcPolicy(c1);
+        int finalAmount = (int) p1.calcPolicy(c1);
         
         System.out.println("Final amount: "+finalAmount);
         
@@ -53,7 +53,7 @@ public class CustomerTest {
         CorpratePolicy cp1 = new CorpratePolicy("123");
         cp1.setHospcover("Private Hospitals");
         cp1.setDtdExpences("Comprehensive");
-        finalAmount = cp1.calcPolicy(c1);
+        finalAmount = (int) cp1.calcPolicy(c1);
         
         System.out.println("Final amount with corperate discount : "
                 +finalAmount);

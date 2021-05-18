@@ -108,12 +108,12 @@ public class Frontend extends javax.swing.JFrame {
                     JOptionPane.ERROR_MESSAGE);
         }
         
-        else if (otherbox.getText().equals(""))
+        /*else if (otherbox.getText().equals(""))
         {
              JOptionPane.showMessageDialog(this,"Please enter other..",
                     "Missing data",
                     JOptionPane.ERROR_MESSAGE);
-        }
+        }*/
         else if (sbtn.getText().equals(""))
         {
              JOptionPane.showMessageDialog(this,"Please enter smoker status..",
@@ -627,13 +627,13 @@ public class Frontend extends javax.swing.JFrame {
             
             
             System.out.println(p.toString());
-             float finalAmount = p.calcPolicy(c);
+             int finalAmount = (int) p.calcPolicy(c);
              
              p.setTotal(finalAmount);
              c.assignPolicy(p);
              
              
-             System.out.println("Final amount: "+finalAmount);
+             System.out.println("Final amount: €"+finalAmount+".00");
              
              if (c.getAge().equalsIgnoreCase("Over 70"))
              {total.setText("N/A");
@@ -643,7 +643,7 @@ public class Frontend extends javax.swing.JFrame {
                     JOptionPane.ERROR_MESSAGE);}
              
              else
-             {total.setText(String.valueOf(finalAmount));}
+             {total.setText(String.valueOf("€ "+finalAmount+".00"));}
              
              
 //             p = new Policy(policyId, hospCover, dtdExpenses,
